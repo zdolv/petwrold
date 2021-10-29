@@ -1,5 +1,7 @@
 package com.petworld.service;
 
+import java.util.ArrayList;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,6 +18,24 @@ public class NoticeServiceImpl implements NoticeService{
 	public boolean regist(NoticeVO vo) {
 		
 		return noticeMapper.regist(vo);
+	}
+
+	@Override
+	public NoticeVO getContent(int bno) {
+
+		return noticeMapper.getContent(bno);
+	}
+
+	@Override
+	public boolean Update(NoticeVO vo) {
+
+		return noticeMapper.Update(vo);
+	}
+
+	@Override
+	public ArrayList<NoticeVO> getList() {
+		
+		return noticeMapper.getList();
 	}
 
 }

@@ -41,7 +41,7 @@
       </div>
     </div>
 
-    <div class="store_box" onclick="location.href=''">
+    <div class="store_box" onclick="location.href='productDetail?pid=${vo.pID}'">
       <div class="store_img">
         <img src="/resources/img/dogEat04.jpg">
       </div>

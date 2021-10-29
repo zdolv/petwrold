@@ -25,20 +25,7 @@
           <td>지태훈</td>
           <td>1</td>
         </tr>
-        <tr>
-          <td>2</td>
-          <td class="td_title">ㅋㅋ2</td>
-          <td>2021.10.22</td>
-          <td>지태훈2</td>
-          <td>2</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td class="td_title">ㅋㅋ2</td>
-          <td>2021.10.22</td>
-          <td>지태훈2</td>
-          <td>2</td>
-        </tr>
+  
 
       </table>
     </div>

@@ -7,5 +7,17 @@
 	<insert id="regist">
 		insert into BOARDEX(bno,title,writer,content) values(BOARDEX_SEQ.NEXTVAL,#{title},#{writer},#{content})     
 	</insert>	
+	
+	<select id="getList" resultType="NoticeVO">
+		select bno, title, regdate, writer, cnt from BOARDEX
+	</select>
+	
+	<select id="getContent" resultType="NoticeVO">
+		select bno,title,writer,content from BOARDEX where bno = #{bno}
+	</select>
+	
+	<update id="Update">
+		update BOARDEX set title=#{title}, content=#{content}, regdate=sysdate where bno=#{bno}
+	</update>
 
 </mapper>

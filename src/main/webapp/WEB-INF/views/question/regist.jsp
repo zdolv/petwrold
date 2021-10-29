@@ -9,7 +9,7 @@
                   <div class="titlebox">
                       <p>자유게시판</p>
                   </div>
-                <form action="noticeRegist" method="post"> 
+                <form action="registForm" method="post"> 
                   <table class="table">
                       <tbody class="t-control">
                           <tr>
@@ -31,7 +31,7 @@
                 
                   <div class="titlefoot">
                       <button class="btn" type="submit">등록</button>
-                      <button class="btn" type="button" onclick="location.href='notice'">목록</button>
+                      <button class="btn" type="button" onclick="location.href='question.html'">목록</button>
                   </div>
                     </form> 
               </div>

@@ -40,7 +40,7 @@
                             <p>수정하기</p>
                         </div>
                         
-                        <form action="freeUpdate" method="post">
+                        <form action="noticeUpdate" method="post">
                             <div>
                                 <label>DATE</label>
                                 <p>${vo.regdate }</p>
