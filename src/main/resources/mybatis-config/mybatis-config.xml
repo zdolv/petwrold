@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<!-- 마이바티스의 부가적인 외부설정 -->
+<configuration>
+	<typeAliases>
+		<typeAlias type="com.petworld.command.PetVO" alias="PetVO"/>
+		<typeAlias type="com.petworld.command.PayVO" alias="PayVO"/>
+		<typeAlias alias="ProductVO" type="com.petworld.command.ProductVO"/>
+		<typeAlias alias="OrderVO" type="com.petworld.command.OrderVO"/>
+		<typeAlias alias="NoticeVO" type="com.petworld.command.NoticeVO"/>
+		<typeAlias alias="QuestionVO" type="com.petworld.command.QuestionVO"/>
+		<typeAlias type="com.petworld.command.UserVO" alias="UserVO"/>
+		<typeAlias alias="SalesVO" type="com.petworld.command.SalesVO"/>
+		<typeAlias alias="PayMentVO" type="com.petworld.command.PayMentVO"/>
+		<typeAlias alias="CategoryVO" type="com.petworld.command.CategoryVO"/>
+	</typeAliases>
+</configuration>

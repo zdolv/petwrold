@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.petworld.mapper.PetMapper">
+	
+	<!-- 펫 등록 -->
+	<insert id="petRegistForm">
+		insert into pet(pNum, pName, pPhoto, pYear, pMonth, pWeight, pFirst, uploadpath, fileloca, filename, pkind, pid, userid)
+		values(pet_seq.nextval, #{pname}, #{pphoto}, #{pyear}, #{pmonth}, #{pweight}, #{pfirst}, #{uploadpath}, #{fileloca}, #{filename}, #{pkind}, #{pid}, #{userid})
+	</insert>
+	
+	<!-- 펫 목록 -->
+	<select id="getList" resultType="PetVO">
+		select * from pet
+	</select>
+	
+	<select id="petInfo" resultType="PetVO">
+		select * from pet where pnum = #{pnum}
+	</select>
+	
+	<!-- 펫 정보 수정 -->
+	<update id="petInfoUpdate">
+		update pet set  pName = #{pname}, pPhoto = #{pphoto}, pYear = #{pyear}, pMonth = #{pmonth}, pWeight = #{pweight}, pFirst = #{pfirst}, 
+				uploadpath = #{uploadpath}, fileloca = #{fileloca}, filename = #{filename}, pkind = #{pkind}
+		where pnum = #{pnum}
+	</update>
+
+	<!-- 펫 삭제 -->
+	<delete id="petDelete">
+		delete from pet where pnum = #{pnum}
+	</delete>
+
+</mapper>

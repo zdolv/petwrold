@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="com.petworld.mapper.OrderMapper">
+  	<select id="orderList" resultType="OrderVO">
+  		select * from USER_ORDER u, member m
+  		where u.mid = m.id
+
+ 	</select>
+  	
+  	
+  	<select id="searchList" resultType="OrderVO">
+  		SELECT * FROM USER_ORDER
+  		   <if test="fromDate != '' and toDate != '' ">
+		   <![CDATA[
+ 		   WHERE ORDATE >= TO_DATE(#{fromDate}, 'YYYY-MM-DD') AND 
+          ORDATE <= TO_DATE(#{toDate}, 'YYYY-MM-DD') 
+            ]]> 
+           </if>
+       	   ORDER BY ORDATE DESC
+  	</select>
+  	
+  </mapper>
